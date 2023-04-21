@@ -1,0 +1,15 @@
+<header class='header'>
+  <div class="wrapper">
+      <h1 class='header__logo'><a routerLink="home">PawelMatusz.pl</a> </h1>
+      <nav class='header__nav'>
+        <ul class="header__nav-list">
+          <li *ngFor="let path of paths">
+          <a routerLink="{{path}}">
+            {{path}}
+          </a>
+        </li>
+        </ul>
+      </nav>
+
+  </div>
+</header>

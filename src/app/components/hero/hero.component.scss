@@ -1,0 +1,25 @@
+.hero {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto 1fr;
+    grid-gap: 5rem;
+  }
+
+  .heading,
+  &__caption,
+  .button {
+    grid-column-start: 1;
+    place-self: start;
+  }
+
+  .heading {
+    align-self: end;
+  }
+
+  .img {
+    grid-row: 1/4;
+    grid-column-end: -1
+  }
+
+}
