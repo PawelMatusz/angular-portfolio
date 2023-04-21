@@ -1,6 +1,20 @@
-<h2>Repositories:</h2>
-<ul>
-  <li *ngFor="let repo of repositories | async">
-    <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-  </li>
-</ul>
+<div class="wrapper">
+
+  <h2>Repositories:</h2>
+  <ul class="repositories">
+    <li *ngFor="let repo of repositories$ | async" >
+      <div class="repositories__element" *ngIf="!repo.fork">
+        <h3>
+          <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+        </h3>
+        <br>
+        <h4>{{repo.description}}</h4>
+        <br>
+        <p>Ostatnie zmiany: {{repo.updated_at | date: 'dd-MM-yyyy'}} </p>
+        <br>
+        <p class="repositories__element-language">{{repo.language}}</p>
+      </div>
+
+    </li>
+  </ul>
+</div>

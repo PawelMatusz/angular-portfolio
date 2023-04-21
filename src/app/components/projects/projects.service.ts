@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Repository } from './repository';
 
 
@@ -15,6 +15,9 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   getRepositories(): Observable<Array<Repository>> {
-    return this.http.get<Array<Repository>>(this.apiUrl);
+    const url = `${this.apiUrl}`;
+    return this.http.get<Array<Repository>>(url).pipe(
+      map(repositories => repositories.filter(repo => repo.stargazers_count > 0)),
+    );
   }
 }

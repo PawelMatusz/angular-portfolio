@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { GithubService } from './projects.service';
-import { Subject } from 'rxjs';
+import { Subject, filter,  } from 'rxjs';
 import { Repository } from './repository';
 
 @Component({
@@ -10,16 +10,19 @@ import { Repository } from './repository';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectsComponent {
-  repositories: Subject<Repository[]> = new Subject()
-  constructor(private githubService: GithubService) {
+  repositories$: Subject<Repository[]> = new Subject();
+  filteredRepositories: Repository[] = [];
 
-  }
+  constructor(private githubService: GithubService) {}
 
   ngOnInit(): void {
     this.githubService.getRepositories().subscribe(
-      (response: Array<Repository>) => {
-        this.repositories.next(response);
+      (response: Repository[]) => {
+        this.repositories$.next(response);
+        console.log(response)
       }
     );
+
   }
+
 }

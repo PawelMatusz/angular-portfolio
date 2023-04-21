@@ -108,3 +108,10 @@ a {
     }
   }
 }
+.button {
+  display: flex;
+  padding: 1rem;
+  place-items: center;
+  border: 1px solid #000;
+  border-radius: 1rem;
+}
