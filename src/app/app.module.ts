@@ -17,6 +17,10 @@ import { ProjectComponent } from './components/projects/project/project.componen
 import { HttpClientModule } from '@angular/common/http';
 import { HeroComponent } from './components/hero/hero.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -38,9 +42,11 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,1 +1,19 @@
-<p>contact works!</p>
+<div class="wrapper">
+
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Imię:</label>
+    <input type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="email">E-mail:</label>
+    <input type="email" formControlName="email">
+  </div>
+  <div>
+    <label for="message">Wiadomość:</label>
+    <textarea formControlName="message"></textarea>
+  </div>
+  <button type="submit" >Wyślij</button>
+</form>
+</div>
