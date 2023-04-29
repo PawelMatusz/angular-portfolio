@@ -1,10 +1,15 @@
-.repositories {
+
+.projects {
+  margin-top:2rem;
+
+&__repositories {
   display: flex;
   flex-wrap: wrap;
-place-content: center;
+  place-content: center;
   gap: 3rem;
+  margin-top:2rem;
 
-  &__element {
+  &-element {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -17,8 +22,9 @@ place-content: center;
     border-radius: 1rem;
     text-align: center;
 
-    &-language{
+    &__language{
       margin-top: auto;
     }
   }
+}
 }

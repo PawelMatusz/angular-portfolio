@@ -82,6 +82,8 @@ html {
 body {
     font-family: var(--font-family-default);
     font-size: 1.6rem;
+    display: block;
+    min-height: 100vh;
 }
 
 a {
@@ -108,10 +110,12 @@ a {
     }
   }
 }
+
 .button {
   display: flex;
   padding: 1rem;
   place-items: center;
   border: 1px solid #000;
   border-radius: 1rem;
+  gap:1rem
 }
