@@ -1,13 +1,14 @@
 .header {
   --wrapper-width: 128rem;
 .active {
-text-decoration: underline;
+  text-decoration: underline;
 }
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  height: 15vh;
+  display: flex;
+  align-items: center;
   font-family: var(--font-family-mono);
-
   border-bottom: 1px solid #000;
+
   .wrapper {
     display: flex;
     gap: 4rem;
