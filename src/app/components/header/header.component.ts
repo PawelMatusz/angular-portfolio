@@ -11,7 +11,7 @@ export class HeaderComponent {
     'experience',
     'projects',
     'tech-stack',
-    'education',
+    'about',
     'contact'
   ]
 

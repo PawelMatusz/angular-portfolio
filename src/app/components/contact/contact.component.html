@@ -1,19 +1,8 @@
-<div class="wrapper">
+<section class="contact">
+  <div class="wrapper">
+  <p>email: <a href="mailto:pawel.matusz94@gmail.com">pawel.matusz94@gmail.com</a></p>
+  <p>linkedin: <a href="https://www.linkedin.com/in/pawel-matusz/">https://www.linkedin.com/in/pawel-matusz/</a></p>
+  <p>github: <a href="https://github.com/PawelMatusz">https://github.com/PawelMatusz</a></p>
+  </div>
 
-
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Imię:</label>
-    <input type="text" formControlName="name">
-  </div>
-  <div>
-    <label for="email">E-mail:</label>
-    <input type="email" formControlName="email">
-  </div>
-  <div>
-    <label for="message">Wiadomość:</label>
-    <textarea formControlName="message"></textarea>
-  </div>
-  <button type="submit" >Wyślij</button>
-</form>
-</div>
+</section>
