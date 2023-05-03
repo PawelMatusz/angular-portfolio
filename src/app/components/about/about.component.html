@@ -1,1 +1,9 @@
-<p>about works!</p>
+<section class="about">
+  <div class="wrapper">
+    <div class="about__item" *ngFor="let faq of faqs">
+    <h3 class="about__question">{{ faq.question }}</h3>
+      <p class="about__answer">{{ faq.answer }}</p>
+    </div>
+  </div>
+</section>
+

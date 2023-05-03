@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { GithubService } from './projects.service';
-import { Subject, filter,  } from 'rxjs';
+import { Subject } from 'rxjs';
 import { Repository } from './repository';
 
 @Component({
@@ -11,7 +11,6 @@ import { Repository } from './repository';
 })
 export class ProjectsComponent {
   repositories$: Subject<Repository[]> = new Subject();
-  filteredRepositories: Repository[] = [];
 
   constructor(private githubService: GithubService) {}
 

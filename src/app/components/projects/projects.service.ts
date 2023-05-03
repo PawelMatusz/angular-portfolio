@@ -14,7 +14,7 @@ export class GithubService {
 
   constructor(private http: HttpClient) { }
 
-  getRepositories(): Observable<Array<Repository>> {
+  getRepositories(): Observable<Repository[]> {
     const url = `${this.apiUrl}`;
     return this.http.get<Array<Repository>>(url).pipe(
       map(repositories => repositories.filter(repo => repo.stargazers_count > 0)),
