@@ -1,7 +1,7 @@
 <section class="technologies">
 <div class="wrapper">
   <article class="technology" *ngFor="let technology of technologies">
-    <img class="technology__icon" src="{{ technology.icon }}" alt="{{technology.name}} logo">
+    <img loading="lazy" class="technology__icon" src="{{ technology.icon }}" alt="{{technology.name}} logo">
     <h2 class="technology__name">{{ technology.name }}</h2>
   </article>
 </div>
