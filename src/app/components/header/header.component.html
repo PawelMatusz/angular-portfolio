@@ -1,7 +1,12 @@
 <header class='header'>
   <div class="wrapper">
       <h1 class='header__logo'><a routerLink="home" >PawelMatusz.pl</a> </h1>
-      <nav class='header__nav'>
+      <nav class='header__nav' [class.is-active]="navbarOpen">
+        <button  class="header__nav-burger" aria-label="menu" aria-expanded="false" (click)="toggleNavbar()">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
         <ul class="header__nav-list">
           <li *ngFor="let path of paths">
           <a routerLinkActive="active" routerLink="{{path}}">

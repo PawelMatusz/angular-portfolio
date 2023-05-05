@@ -11,6 +11,7 @@
 
   .wrapper {
     display: flex;
+    align-items: center;
     gap: 4rem;
   }
 
@@ -21,9 +22,88 @@
   }
 
   &__nav{
+
+    &-burger {
+      position: relative;
+      display: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      height: 44px;
+      position: relative;
+      width: 44px;
+      z-index: 2;
+      @media (max-width:1024px) {
+        display: block;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      span {
+        background-color: #333;
+        display: block;
+        height: 2px;
+        left: 50%;
+        margin: -1px 0 0 -10px;
+        position: absolute;
+        transition-duration: 0.15s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+        width: 20px;
+
+        &:nth-of-type(1) {
+          top: 14px;
+        }
+
+        &:nth-of-type(2) {
+          top: 22px;
+        }
+
+        &:nth-of-type(3) {
+          top: 30px;
+        }
+      }
+
+    }
+
+    &.is-active {
+      span {
+        &:nth-of-type(1) {
+          transform: rotate(-45deg) translate(-6px, 6px);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          transform: rotate(45deg) translate(-6px, -6px);
+        }
+      }
+
+    }
+
   &-list {
     display: flex;
     gap: 2rem;
+    @media (max-width:1024px) {
+      display: none;
+    }
+  }
+  &.is-active &-list {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    flex-direction: column;
+    background: #fff;
+    bottom: 0;
+    justify-content: center;
+    padding: 2rem;
+
   }
 }
 }

@@ -18,7 +18,7 @@ export class ExperienceComponent {
       'logo': '../../../assets/img/netguru_logo.jpeg'
     },
     {
-      "companyName": 'Autenti.com',
+      "companyName": 'Autenti',
       "during": '09/2022 - 03/2023',
       'description': "As part of my work at Autenti, I was responsible for creating a website on the HubSpot platform. This involved using HTML, CSS, JavaScript, and HubL to build the site.",
       'role': 'Frontend Developer',

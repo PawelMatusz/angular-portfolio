@@ -1,32 +1,35 @@
 .hero {
 height: 100%;
+
   .wrapper {
-    height: 100%;
- display: flex;
- justify-content: space-between;
- align-items: center;
+  height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+@media (max-width: 860px) {
+  flex-direction: column;
+margin-top: 2rem;
+gap:2rem;
+
+}
   }
+
   &__container {
     display: flex;
     align-items: flex-start;
     gap: 5rem;
     flex-direction: column;
+    @media (max-width: 860px) {
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+
+    }
   }
-
-  // .heading,
-  // &__caption,
-  // .button {
-
-  // }
-
-  // .heading {
-
-  // }
-
   .img {
     width: 100%;
     max-width: 50%;
-    max-height: 100%;
   }
 
 }

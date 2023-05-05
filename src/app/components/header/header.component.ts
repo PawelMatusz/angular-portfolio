@@ -7,6 +7,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
+navbarOpen: boolean = false;
+
+toggleNavbar() {
+  this.navbarOpen = !this.navbarOpen;
+}
    paths:String[] = [
     'experience',
     'projects',
